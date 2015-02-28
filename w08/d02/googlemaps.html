@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+#map-canvas { height: 600px; width: 800px;}
+</style>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBr89IuqNIbs7-7AYxTAtsqYQpk2vW4lk"></script>
+</head>
+<body>
+  <div id="map-canvas"></div>
+  <script>
+  var answer = window.prompt("Please enter a latitude and longitude to see your desired location. Please separate with a comma.");
+  var split = answer.split(",");
+  var latitude = parseFloat(split[0]);
+  var longitude = parseFloat(split[1]);
+  var mapOptions = {
+    center: { lat: latitude, lng: longitude},
+    zoom: 11
+  };
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  </script>
+</body>
+</html>

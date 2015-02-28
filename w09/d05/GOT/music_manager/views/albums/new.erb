@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <meta charset="UTF-8">
+  <title>New Album</title>
+</head>
+<body>
+  <form action="/albums" method="POST">
+    <input type="text" name="name" placeholder="Name" />
+    <input type="text" name="url" placeholder="Image Url" />
+    <select name="artist_id">
+      <% artists.each do |artist| %>
+        <option value="<%= artist.id %>"><%= artist.name %></option>
+      <% end %>
+    </select>
+    <button>Submit</button>
+  </form>
+</body>
+</html>

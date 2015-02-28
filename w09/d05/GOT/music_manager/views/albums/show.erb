@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <meta charset="UTF-8">
+  <title><%= album.name %></title>
+</head>
+<body>
+  <h1><%= album.name %></h1>
+  <div>
+    <a href="/albums/<%= album.id %>/edit">Edit</a>
+  </div>
+  <img src="<%= album.image_url %>" />
+  <p>From House
+    <a href="/houses/<%=album.house.id %>">
+      <%= album.artist.name %>
+    </a>
+  </p>
+</body>
+</html>

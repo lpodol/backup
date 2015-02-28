@@ -1,0 +1,46 @@
+<html>
+<body>
+  <ol>
+    <li><input id = "input" type = "text"></li>
+    <li><button>Click here!</button></li>
+    <li><ul></ul></li>
+  </ol>
+  <script>
+
+  var input = document.getElementById("input");
+  var button = document.querySelector("button");
+  button.addEventListener("click",function(){
+    var ul = document.querySelector("ul");
+    var li = document.createElement("li");
+    var text = input.value;
+    li.setAttribute("draggable","true")
+    li.innerText = text;
+    ul.appendChild(li);
+    input.value = "";
+    li.addEventListener("dragstart",function(){
+      var ul = document.querySelector("ul");
+      ul.removeChild(this);
+    });
+  });
+
+  input.addEventListener("keyup",function(){
+    var keycode = event.keyCode;
+    if (keycode === 13){
+      var ul = document.querySelector("ul");
+      var input = document.getElementById("input");
+      var li = document.createElement("li");
+      li.setAttribute("draggable","true")
+      var text = input.value;
+      li.innerText = text;
+      ul.appendChild(li);
+      input.value = "";
+      li.addEventListener("dragstart",function(){
+        var ul = document.querySelector("ul");
+        ul.removeChild(this);
+      });
+    };
+  });
+
+  </script>
+</body>
+</html>

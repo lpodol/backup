@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <p>
+    </p>
+    <input id = "input" type = "text">
+    <script>
+    var body = document.querySelector("body")
+    var input = document.getElementById("input");
+    input.addEventListener("keyup",function(){
+    var p = document.querySelector("p");
+    var text = input.value;
+    p.innerText = text;
+    body.appendChild(p);
+    })
+    </script>
+  </body>
+</html>

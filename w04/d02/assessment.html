@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <script>
+    var body = document.querySelector("body");
+    var h1 = document.createElement("h1");
+    var ul = document.createElement("ul");
+    h1.innerText = "Top 10 Songs";
+    body.appendChild(h1);
+    h1.appendChild(ul);
+
+    var songs = ["Taylor Swift, Blank Space", "Meghan Trainor, All About That Base", "Hozier, Take Me to Church", "Taylor Swift, Shake It Off", "Maroon 5, Animals","Selena Gomez, The Heart Wants What It Wants", "Sam Smith, I'm Not the Only One", "Mark Ronson ft. Bruno Mars, Uptown Funk!","Tove Lo, Habits (Stay High)", "Ariana Grande & The Weekend, Love Me Harder"]
+
+    songs.forEach(function(x){
+      var li = document.createElement("li");
+      li.innerText = x;
+      ul.appendChild(li);
+    })
+    </script>
+  </body>
+</html>

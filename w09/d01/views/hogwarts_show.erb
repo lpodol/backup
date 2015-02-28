@@ -1,0 +1,21 @@
+<html>
+<header>
+  <h1>Hogwarts Student Registry</h1>
+  <a href = "/students">go home</a>
+</header>
+<body>
+  <p><%= thisstudent[:name] %> is a <%= thisstudent[:age] %>. This student's favorite spell is <%= thisstudent[:spell]%>.</p>
+  <h3>Change <%= thisstudent[:name] %>'s name here:</h3>
+  <form action = "/student/<%=thisstudent[:id]%>" method = "post">
+    <input type="hidden" name="_method" value = "put"><!--method override. browsers can't handle post or delete yet.-->
+    <input type="text" name="newname" placeholder="new name?" required>
+    <button>Update</button>
+  </form>
+
+  <p><%= thisstudent[:name] %> can be removed here: </p>
+  <form action = "/student/<%=thisstudent[:id] %>" method = "post">
+    <input type="hidden" name="_method" value = "delete"><!--method override-->
+    <button>Remove</button>
+  </form>
+</body>
+</html>

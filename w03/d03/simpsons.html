@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <button id = "button1">Add a random character!</button>
+    <button id = "button2">Remove a character</button>
+  </head>
+  <body>
+    <ul>
+    </ul>
+    <script>
+    var ul = document.querySelector("ul");
+
+    var simpsons = ["Homer","Marge","Bart","Lisa","Maggie","Abe"]
+
+    simpsons.forEach(function(x){
+      var items = document.createElement("li");
+      items.innerText = x;
+      ul.appendChild(items);
+      items.id = x;
+    });
+
+    var secondary = ["Apu","Moe","Barney","Otto","Nelson"]
+
+    var button = document.querySelector("#button1")
+    button.addEventListener("click",function(){
+      var characters = document.createElement("li");
+      characters.innerText = secondary[Math.floor(secondary.length*Math.random())]
+      ul.appendChild(characters);
+    })
+
+    var removalbutton = document.querySelector("#button2")
+    removalbutton.addEventListener("click",function(){
+      var everyone = document.querySelectorAll("li");
+      var finalperson = everyone[everyone.length-1]
+      ul.removeChild(finalperson)
+    })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+  <body>
+    <canvas id="person" width = "800" height = "800"></canvas>
+      <script>
+        var canvas= document.getElementById("person");
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo(370,185);
+        ctx.bezierCurveTo(370,-20,230,-20,230,185);
+        ctx.fillStyle="SaddleBrown";
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(300,100,50,0,Math.PI*2,true);
+        ctx.fillStyle="BlanchedAlmond";
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(300,200);
+        ctx.lineTo(150,300);
+        ctx.lineTo(125,305);
+        ctx.lineTo(300,185);
+        ctx.fillStyle="Blanched Almond";
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(300,185);
+        ctx.lineTo(450,300);
+        ctx.lineTo(435,300);
+        ctx.lineTo(300,200);
+        ctx.fillStyle="BlanchedAlmond";
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(300,150);
+        ctx.lineTo(400,400);
+        ctx.lineTo(200,400);
+        ctx.lineTo(300,150);
+        ctx.fillStyle="Aquamarine";
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(275,400);
+        ctx.lineTo(275,601);
+        ctx.lineTo(260,601);
+        ctx.lineTo(260,400);
+        ctx.fillStyle="BlanchedAlmond";
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(345,400);
+        ctx.lineTo(345,601);
+        ctx.lineTo(330,601);
+        ctx.lineTo(330,400);
+        ctx.fillStyle="BlanchedAlmond";
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.fillStyle="SaddleBrown";
+        ctx.fillRect(261,570,13,30);
+        ctx.fillRect(331,570,13,30);
+
+        ctx.beginPath();
+        ctx.arc(270,90,5,0,Math.PI*2,true);
+        ctx.fillStyle="brown";
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(330,90,5,0,Math.PI*2,true);
+        ctx.fillStyle="brown";
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+    </script>
+  </body>
+</html>

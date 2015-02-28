@@ -1,0 +1,101 @@
+<html>
+<head>
+<style>
+body {
+  background: url("https://farm8.staticflickr.com/7557/15709711657_80e7cf5344.jpg") no-repeat;
+  background-size: 100%;
+}
+</style>
+</head>
+<body>
+  <canvas id="person" width = "1600" height = "1600"></canvas>
+  <script>
+  var canvas= document.getElementById("person");
+  var ctx = canvas.getContext("2d");
+
+  ctx.beginPath();
+  ctx.moveTo(750,165);
+  ctx.bezierCurveTo(815,145,830,165,840,200);
+  ctx.lineTo(750,165);
+  ctx.fillStyle= "yellow";
+  ctx.fill();
+  ctx.closePath;
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(815,150);
+  ctx.lineTo(860,60);
+  ctx.closePath();
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(770,100);
+  ctx.lineTo(880,145);
+  ctx.lineTo(855,70);
+  ctx.lineTo(770,100);
+  ctx.fillStyle= "green";
+  ctx.fill();
+  ctx.closePath;
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.arc(815,150,15,15,Math.PI*2,true);
+  var cherry= ctx.createRadialGradient(815,150,0,805,140,22);
+  cherry.addColorStop(0,"white");
+  cherry.addColorStop(1,"red");
+  ctx.fillStyle=cherry;
+  ctx.fill();
+  ctx.closePath;
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(675,475);
+  ctx.lineTo(670,580);
+  ctx.lineTo(690,580);
+  ctx.lineTo(685,475);
+  ctx.closePath();
+  ctx.fillStyle= "rgba(255, 255, 255, 0.6)";
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(690,580);
+  ctx.lineTo(730,600);
+  ctx.lineTo(630,600);
+  ctx.lineTo(670,580);
+  ctx.fillStyle= "rgba(255, 255, 255, 0.6)";
+  ctx.fill();
+  ctx.closePath();
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(560,175);
+  ctx.lineTo(560,475);
+  ctx.lineTo(800,475);
+  ctx.lineTo(800,175);
+  ctx.lineTo(560,175);
+  ctx.fillStyle= "rgba(255, 255, 255, 0.5)";
+  ctx.fill();
+  ctx.closePath();
+  ctx.stroke();
+
+
+  var y = 230;
+  var draw= function(){
+    y+=1;
+    if (y>244){
+      y=230;
+    };
+    var grd=ctx.createLinearGradient(695,230,695,400)
+    grd.addColorStop(0, "white");
+    grd.addColorStop(1, "yellow");
+    ctx.fillStyle= grd;
+    ctx.fillRect(561,y,238,244);
+  };
+  setInterval(draw,5);
+
+</script>
+
+</body>
+<iframe width="0" height="0" src="https://www.youtube.com/embed/kwrAjPaFJzs?autoplay=1" frameborder="0" allowfullscreen></iframe>
+</html>

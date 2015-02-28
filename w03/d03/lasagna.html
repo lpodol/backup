@@ -1,0 +1,42 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      var lasagna = document.createElement("h3");
+      var body = document.querySelector("body");
+      body.appendChild(lasagna);
+      lasagna.innerText = "Lasagna!";
+
+      var ul = document.createElement("ul");
+      body.appendChild(ul);
+
+      var pasta = document.createElement("li");
+      ul.appendChild(pasta);
+      pasta.innerText = "pasta";
+      pasta.id = ("pasta")
+
+      var sauce = document.createElement("li");
+      ul.appendChild(sauce);
+      sauce.innerText = "sauce";
+      sauce.id = ("sauce")
+
+      var ingredients = document.createElement("p");
+      body.insertBefore(ingredients,ul);
+      ingredients.innerText = "Ingredients needed:"
+
+      ul.removeChild(pasta);
+      var noodles = document.createElement("li");
+      ul.insertBefore(noodles,sauce);
+      noodles.innerText = "lasagna noodles"
+
+      var cheese = document.createElement("li");
+      ul.appendChild(cheese)
+      cheese.innerText = "cheese"
+      cheese.id = "cheese"
+
+
+
+    </script>
+  </body>
+</html>
